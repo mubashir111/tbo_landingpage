@@ -135,11 +135,16 @@
       grid-template-columns: 1fr 1fr;
       gap: 50px;
       color: #fff;
+      align-items: center;
     }
 
     .contact-info-box h2 {
       font-size: 48px;
       margin-bottom: 20px;
+    }
+
+    .contact-info-box .feature-section-text {
+      text-align: left;
     }
 
     .contact-info-box h2 span {
@@ -168,7 +173,7 @@
 
     .contact-form-box {
       background: rgba(255, 255, 255, 0.05);
-      padding: 40px;
+      padding: 20px;
       border-radius: 20px;
       border: 1px solid rgba(255, 255, 255, 0.1);
     }
@@ -182,8 +187,8 @@
     .form-group {
       display: flex;
       flex-direction: column;
-      gap: 8px;
-      margin-bottom: 20px;
+      gap: 6px;
+      margin-bottom: 12px;
     }
 
     .form-group label {
@@ -193,7 +198,7 @@
     .form-group input,
     .form-group select,
     .form-group textarea {
-      padding: 12px;
+      padding: 10px 12px;
       border-radius: 8px;
       border: 1px solid rgba(255, 255, 255, 0.2);
       background: transparent;
@@ -207,7 +212,7 @@
     .submit-btn {
       background: var(--gradient-ember);
       color: var(--bg-obsidian);
-      padding: 15px;
+      padding: 12px;
       border: none;
       border-radius: 30px;
       font-weight: bold;
@@ -572,12 +577,38 @@
     /* Alternative approach: if the banner IS visible, we push the header down */
     /* But since user wants it gone, we try to hide it first */
 
-    /* Force navbar to stay on top but allow for the gap if needed */
-    .header {
-      top: 0;
-      transition: top 0.3s ease;
-    }
-  </style>
+      /* Force navbar to stay on top but allow for the gap if needed */
+      .header {
+        top: 0;
+        transition: top 0.3s ease;
+      }
+
+      /* Aggressive FAQ Alignment Fix */
+      .faq-section-title-area,
+      .section-title-text.faq,
+      .faq-question-area,
+      .faq-answer,
+      .question-title,
+      .answer-text {
+        text-align: left !important;
+        align-items: flex-start !important;
+        justify-content: flex-start !important;
+      }
+      .question-title, .answer-text {
+        flex: 1 !important;
+        width: 100% !important;
+        display: block !important;
+      }
+
+      @media (min-width: 992px) {
+        .footer-about-content {
+          width: 30% !important;
+        }
+        .footer-menu-box {
+          width: 65% !important;
+        }
+      }
+    </style>
   <link href="https://fonts.googleapis.com" rel="preconnect" />
   <link href="https://fonts.gstatic.com" rel="preconnect" />
   <script src="assets/ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js" type="text/javascript"></script>
@@ -1317,8 +1348,7 @@
               <div data-delay="0" data-hover="false" data-w-id="30f44c6a-4c77-137f-d781-f67d440799ab"
                 class="single-faq-box w-dropdown">
                 <div class="faq-question-area w-dropdown-toggle">
-                  <div class="question-title text-gradient">What is an ERP system and why it is important for businesses
-                    in Dubai?</div>
+                  <div class="question-title text-gradient">What is an ERP system and why it is important for businesses in Dubai?</div>
                   <div class="faq-icon-wrapper">
                     <div class="faq-line-shape-01"></div>
                     <div
@@ -1328,18 +1358,14 @@
                 </div>
                 <nav style="height:0px" class="faq-answer-wrapper w-dropdown-list">
                   <div class="faq-answer">
-                    <p class="answer-text">An ERP (Enterprise Resource Planning) system integrates all your business
-                      processes—finance, HR, sales, and supply chain—into one platform. In Dubai, it is crucial for
-                      ensuring compliance with local regulations like ZATCA and VAT, while streamlining operations for
-                      faster growth.</p>
+                    <p class="answer-text">An ERP (Enterprise Resource Planning) system integrates all your business processes—finance, HR, sales, and supply chain—into one platform. In Dubai, it is crucial for ensuring compliance with local regulations like ZATCA and VAT, while streamlining operations for faster growth.</p>
                   </div>
                 </nav>
               </div>
               <div data-delay="0" data-hover="false" data-w-id="30f44c6a-4c77-137f-d781-f67d440799b7"
                 class="single-faq-box w-dropdown">
                 <div class="faq-question-area w-dropdown-toggle">
-                  <div class="question-title text-gradient">Do employees need special training to use an ERP system?
-                  </div>
+                  <div class="question-title text-gradient">Do employees need special training to use an ERP system?</div>
                   <div class="faq-icon-wrapper">
                     <div class="faq-line-shape-01"></div>
                     <div
@@ -1349,9 +1375,7 @@
                 </div>
                 <nav style="height:0px" class="faq-answer-wrapper w-dropdown-list">
                   <div class="faq-answer">
-                    <p class="answer-text">While some initial orientation is helpful, modern ERP systems like ours are
-                      built with user-friendly interfaces that mimic common apps. Most teams can get up to speed very
-                      quickly with minimal training.</p>
+                    <p class="answer-text">While some initial orientation is helpful, modern ERP systems like ours are built with user-friendly interfaces that mimic common apps. Most teams can get up to speed very quickly with minimal training.</p>
                   </div>
 
                 </nav>
@@ -1369,17 +1393,14 @@
                 </div>
                 <nav style="height:0px" class="faq-answer-wrapper w-dropdown-list">
                   <div class="faq-answer">
-                    <p class="answer-text">Industries such as retail, manufacturing, logistics, and professional
-                      services see the biggest impact. Any business that handles high volumes of transactions or complex
-                      inventory will benefit from automation and centralized data.</p>
+                    <p class="answer-text">Industries such as retail, manufacturing, logistics, and professional services see the biggest impact. Any business that handles high volumes of transactions or complex inventory will benefit from automation and centralized data.</p>
                   </div>
                 </nav>
               </div>
               <div data-delay="0" data-hover="false" data-w-id="30f44c6a-4c77-137f-d781-f67d440799d0"
                 class="single-faq-box w-dropdown">
                 <div class="faq-question-area w-dropdown-toggle">
-                  <div class="question-title text-gradient">Is the ERP fully compliant with UAE VAT and the upcoming
-                    2026 E-Invoicing mandate?</div>
+                  <div class="question-title text-gradient">Is the ERP fully compliant with UAE VAT and the upcoming 2026 E-Invoicing mandate?</div>
                   <div class="faq-icon-wrapper">
                     <div class="faq-line-shape-01"></div>
                     <div
@@ -1389,9 +1410,7 @@
                 </div>
                 <nav style="height:0px" class="faq-answer-wrapper w-dropdown-list">
                   <div class="faq-answer">
-                    <p class="answer-text">Absolutely. Our system is designed to meet all current UAE FTA requirements
-                      for VAT and is being proactively updated to support Phase 2 of the ZATCA e-invoicing mandate and
-                      future UAE e-invoicing laws in 2026.</p>
+                    <p class="answer-text">Absolutely. Our system is designed to meet all current UAE FTA requirements for VAT and is being proactively updated to support Phase 2 of the ZATCA e-invoicing mandate and future UAE e-invoicing laws in 2026.</p>
                   </div>
                 </nav>
               </div>
@@ -1408,9 +1427,7 @@
                 </div>
                 <nav style="height:0px" class="faq-answer-wrapper w-dropdown-list">
                   <div class="faq-answer">
-                    <p class="answer-text">We offer transparent pricing with no hidden fees. The total cost typically
-                      includes your subscription fee and optional setup support. Contact us for a detailed demo and
-                      tailored quote for your specific needs.</p>
+                    <p class="answer-text">We offer transparent pricing with no hidden fees. The total cost typically includes your subscription fee and optional setup support. Contact us for a detailed demo and tailored quote for your specific needs.</p>
                   </div>
                 </nav>
               </div>
@@ -1431,24 +1448,7 @@
           <p class="feature-section-text" style="max-width: 500px;">Have questions about TBO ERP or want to see a
             personalized demo? Fill out the form, and our team will get back to you shortly.</p>
 
-          <div class="regional-offices">
-            <div class="office-info">
-              <h4>India</h4>
-              <p>Phase 2, 5th floor, Hilite Business Park,<br>Kozhikode<br>+91 9747 888 220</p>
-            </div>
-            <div class="office-info">
-              <h4>Saudi Arabia</h4>
-              <p>King Abdulaziz St, Al Anud Muhanna<br>Business Park, Dammam 32424<br>+966 54 668 8551</p>
-            </div>
-            <div class="office-info">
-              <h4>UAE</h4>
-              <p>Ras Al Khor Industrial Area, Dubai<br>+971 506 073358</p>
-            </div>
-            <div class="office-info">
-              <h4>UK</h4>
-              <p>124 City Road, London, ECIV 2NX</p>
-            </div>
-          </div>
+
         </div>
 
         <div class="contact-form-box">
@@ -1481,7 +1481,7 @@
               </div>
               <div class="form-group full-width">
                 <label>How can we help?</label>
-                <textarea rows="4" placeholder="Tell us about your business coordination needs..."></textarea>
+                <textarea rows="3" placeholder="Tell us about your business coordination needs..."></textarea>
               </div>
             </div>
             <button type="submit" class="submit-btn">Send Message <img
@@ -1540,6 +1540,32 @@
                   </a><a href="#contact" class="single-menu-link w-inline-block">
                     <div>Contact</div>
                   </a></div>
+              </div>
+              <div class="single-menu-box">
+                <div class="menu-box-title">Middle East Offices</div>
+                <div class="menu-list" style="gap: 20px;">
+                  <div class="office-info">
+                    <h4 style="margin: 0; margin-bottom: 5px; color: var(--primary-ember); font-size: 13px; text-transform: uppercase;">Saudi Arabia</h4>
+                    <p style="margin: 0; font-size: 13px; color: #94A3B8; line-height: 1.5;">King Abdulaziz St, Al Anud Muhanna<br>Business Park, Dammam 32424<br>+966 54 668 8551</p>
+                  </div>
+                  <div class="office-info">
+                    <h4 style="margin: 0; margin-bottom: 5px; color: var(--primary-ember); font-size: 13px; text-transform: uppercase;">UAE</h4>
+                    <p style="margin: 0; font-size: 13px; color: #94A3B8; line-height: 1.5;">Ras Al Khor Industrial Area, Dubai<br>+971 506 073358</p>
+                  </div>
+                </div>
+              </div>
+              <div class="single-menu-box">
+                <div class="menu-box-title">International Offices</div>
+                <div class="menu-list" style="gap: 20px;">
+                  <div class="office-info">
+                    <h4 style="margin: 0; margin-bottom: 5px; color: var(--primary-ember); font-size: 13px; text-transform: uppercase;">India</h4>
+                    <p style="margin: 0; font-size: 13px; color: #94A3B8; line-height: 1.5;">Phase 2, 5th floor, Hilite Business Park,<br>Kozhikode<br>+91 9747 888 220</p>
+                  </div>
+                  <div class="office-info">
+                    <h4 style="margin: 0; margin-bottom: 5px; color: var(--primary-ember); font-size: 13px; text-transform: uppercase;">UK</h4>
+                    <p style="margin: 0; font-size: 13px; color: #94A3B8; line-height: 1.5;">124 City Road, London, ECIV 2NX</p>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
