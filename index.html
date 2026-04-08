@@ -26,8 +26,10 @@
   <meta content="width=device-width, initial-scale=1" name="viewport" />
   <meta content="Webflow" name="generator" />
   <link rel="preload" href="assets/cdn.prod.website-files.com/68ff94c5a894690a1fb077a9/css/starvium.webflow.shared.5fb23d8d0.css" as="style" />
+  <link rel="preload" href="https://fonts.googleapis.com/css2?family=Outfit:wght@100;200;300;400;500;600;700;800;900&display=swap" as="style" />
   <link href="assets/cdn.prod.website-files.com/68ff94c5a894690a1fb077a9/css/starvium.webflow.shared.5fb23d8d0.css"
     rel="stylesheet" type="text/css" />
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet" media="print" onload="this.media='all'" />
   <style>
     @media (max-width:991px) and (min-width:768px) {
       html.w-mod-js:not(.w-mod-ix) [data-w-id="3ce4c986-230f-0461-593d-512f0c488183"] {
@@ -87,12 +89,13 @@
       color: var(--text-slate);
     }
 
-    html.w-mod-js:not(.w-mod-ix3) :is(.hero-title, .section-title) {
-      opacity: 0;
-      transition: opacity 0.5s ease-in-out;
+    html.w-mod-js:not(.w-mod-ix3) :is(.hero-title, .section-title, .hero-dashboard-style) {
+      opacity: 1 !important;
+      visibility: visible !important;
     }
-    html.w-mod-js.w-mod-ix3 :is(.hero-title, .section-title) {
-      opacity: 1;
+    html.w-mod-js.w-mod-ix3 :is(.hero-title, .section-title, .hero-dashboard-style) {
+      opacity: 1 !important;
+      visibility: visible !important;
     }
 
     .hero-title {
@@ -756,7 +759,7 @@
           role="banner" class="navbar-2 w-nav">
           <div class="navbar-content-area">
             <a href="index.html" aria-current="page" class="nav-logo w-nav-brand w--current">
-              <img loading="lazy" src="assets/img/logo/logo-white.png" alt="TBO Logo" class="nav-logo-image" />
+              <img loading="lazy" src="assets/img/logo/logo-white.png" width="191" height="80" alt="TBO Logo" class="nav-logo-image" />
             </a>
             <nav role="navigation" id="mobile-menu" class="nav-menu-2">
               <a href="#features" class="custom-nav-link">Features</a>
@@ -1310,7 +1313,7 @@
               aria-label="Watch the live inventory and sales dashboard preview video"><img
                 src="assets/cdn.prod.website-files.com/68ff94c5a894690a1fb077a9/69060fd25dcabbe1b669f30b_play.svg"
                 loading="lazy" width="20" alt="Play Icon" />
-              <div>Watch Demo</div>
+              <div>Watch TBO ERP Demo</div>
               <script type="application/json" class="w-json">{
   "items": [
     {
@@ -1657,9 +1660,9 @@
       <div class="w-layout-blockcontainer container w-container">
         <div class="footer-copyright-area" style="text-align: center;">
           <p class="footer-copyright-text">© Rights reserved by <a href="https://www.teambackoffice.com"
-              class="author-link">TBO ERP</a></p>
+              class="author-link" style="color: inherit; text-decoration: underline;">TBO ERP</a></p>
           <p class="footer-copyright-text">Design and Develop by <a href="https://www.teambackoffice.com"
-              class="powerd-by-custom" style="color: inherit; text-decoration: none;">Team Back Office</a></p>
+              class="powerd-by-custom" style="color: inherit; text-decoration: underline;">Team Back Office</a></p>
         </div>
       </div>
     </div>
@@ -1781,7 +1784,10 @@
         feat_filing_text: 'Complete integration for ZATCA Phase 2. Enhancing auditability and transparency.',
         feat_vat_title: 'VAT & Inventory',
         feat_vat_text: 'Stress-free VAT filing with Multi-warehouse & Multi-branch support.',
-        feat_learn_more: 'Learn More',
+        feat_link_zatca: 'Learn More about ZATCA',
+        feat_link_migration: 'Learn More about Migration',
+        feat_link_filing: 'Learn More about Filing',
+        feat_link_vat: 'Learn More about VAT',
         proc_subtitle: 'Process',
         proc_title: 'How it works for you',
         proc_desc: 'Simple flow to show how our ERPNext works',
@@ -1860,7 +1866,10 @@
         feat_filing_text: 'تكامل كامل مع متطلبات ZATCA للمرحلة الثانية، مما يعزز قابلية التدقيق والشفافية.',
         feat_vat_title: 'ضريبة القيمة المضافة والمخزون',
         feat_vat_text: 'تقديم إقرارات ضريبة القيمة المضافة بكل سهولة — مع دعم متعدد المستودعات والفروع',
-        feat_learn_more: 'اعرف المزيد',
+        feat_link_zatca: 'اعرف المزيد عن زاتكا',
+        feat_link_migration: 'اعرف المزيد عن الانتقال',
+        feat_link_filing: 'اعرف المزيد عن التقارير',
+        feat_link_vat: 'اعرف المزيد عن الضريبة',
         proc_subtitle: 'العملية',
         proc_title: 'كيف يعمل النظام لصالحك',
         proc_desc: 'تدفق بسيط يوضح آلية عمل نظام ERPNext',
@@ -1964,18 +1973,20 @@
       setText('.our-features-title-area .feature-section-text', 0, 'feat_desc');
       setText('.feature-card-title', 0, 'feat_zatca_title');
       setText('.feature-card-text', 0, 'feat_zatca_text');
+      setText('.feature-box-left-content .button-text-front', 0, 'feat_link_zatca');
+      setText('.feature-box-left-content .button-text-back', 0, 'feat_link_zatca');
+
       setText('.feature-single-title', 0, 'feat_migration_title');
       setText('.feature-card-text', 1, 'feat_migration_text');
+      setText('.feature-card-01 .button-text-style-01', 0, 'feat_link_migration');
+
       setText('.feature-single-title', 1, 'feat_filing_title');
       setText('.feature-card-text', 2, 'feat_filing_text');
+      setText('.feature-card-02 .button-text-style-01', 0, 'feat_link_filing');
+
       setText('.feature-single-title', 2, 'feat_vat_title');
       setText('.feature-card-text', 3, 'feat_vat_text');
-      document.querySelectorAll('.icon-button-text-box .button-text-front, .icon-button-text-box .button-text-back').forEach(function (el) {
-        el.textContent = t['feat_learn_more'];
-      });
-      document.querySelectorAll('.button-text-style-01').forEach(function (el) {
-        el.textContent = t['feat_learn_more'];
-      });
+      setText('.feature-card-03 .button-text-style-01', 0, 'feat_link_vat');
 
       // ── Process ─────────────────────────────────────────────
       setText('.process-content-wrapper .section-subtitle', 0, 'proc_subtitle');
@@ -2033,8 +2044,9 @@
       var submitBtn = document.querySelector('#contact .submit-btn');
       if (submitBtn) {
         var img = submitBtn.querySelector('img');
-        submitBtn.textContent = t['contact_submit'] + ' ';
+        submitBtn.innerHTML = t['contact_submit'] + ' ';
         if (img) submitBtn.appendChild(img);
+        submitBtn.setAttribute('aria-label', t['contact_submit']);
       }
 
       // ── Footer ──────────────────────────────────────────────
