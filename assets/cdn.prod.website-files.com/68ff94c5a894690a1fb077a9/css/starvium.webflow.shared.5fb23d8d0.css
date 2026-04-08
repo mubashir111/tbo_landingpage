@@ -3528,6 +3528,8 @@ blockquote {
 
 .single-client-logo {
   height: 33px;
+  width: auto;
+  object-fit: contain;
 }
 
 .ticker-left-shadow {
