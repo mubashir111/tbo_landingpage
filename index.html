@@ -76,10 +76,10 @@
       --primary-ember: #FB991C;
       --primary-glow: rgba(251, 153, 28, 0.2);
       --bg-obsidian: #030014;
-      --bg-card: rgba(15, 23, 42, 0.4);
+      --bg-card: #0F172A;
       --text-pure: #FFFFFF;
       --text-slate: #94A3B8;
-      --gradient-ember: linear-gradient(135deg, #FB991C 0%, #f37d1d 100%);
+      --gradient-ember: linear-gradient(135deg, var(--primary-ember) 0%, #f37d1d 100%);
     }
 
     body {
@@ -120,7 +120,7 @@
       align-items: flex-start;
       border-radius: 20px 20px 0 0;
       box-shadow: 0 -20px 50px rgba(0, 0, 0, 0.5);
-      background: #030014;
+      background: var(--bg-obsidian);
       position: relative;
     }
 
@@ -147,26 +147,26 @@
     }
 
     .custom-nav-link {
-      color: #fff;
+      color: var(--text-pure);
       text-decoration: none;
       font-weight: 500;
       transition: color 0.3s;
     }
 
     .custom-nav-link:hover {
-      color: #FB991C;
+      color: var(--primary-ember);
     }
 
     .contact-form-section {
       padding: 100px 0;
-      background-color: #0d121f;
+      background-color: var(--bg-card);
     }
 
     .contact-wrapper {
       display: grid;
       grid-template-columns: 1fr 1fr;
       gap: 50px;
-      color: #fff;
+      color: var(--text-pure);
       align-items: center;
     }
 
@@ -199,7 +199,7 @@
 
     .office-info p {
       font-size: 14px;
-      color: #ccc;
+      color: var(--text-slate);
       line-height: 1.6;
     }
 
@@ -234,7 +234,7 @@
       border-radius: 8px;
       border: 1px solid rgba(255, 255, 255, 0.2);
       background: transparent;
-      color: #fff;
+      color: var(--text-pure);
     }
 
     .full-width {
@@ -254,7 +254,7 @@
       justify-content: center;
       gap: 10px;
       width: 100%;
-      box-shadow: 0 10px 20px rgba(251, 153, 28, 0.2);
+      box-shadow: 0 10px 20px var(--primary-glow);
       transition: all 0.3s ease;
     }
 
@@ -263,11 +263,45 @@
       box-shadow: 0 15px 30px rgba(251, 153, 28, 0.4);
     }
 
+    /* ─── Shared Theme Synchronization ─────────────────── */
+    .featured-section-title.section-title, 
+    .text-gradient,
+    .question-title.text-gradient,
+    .process-card-title.text-gradient,
+    .feature-card-title,
+    .feature-single-title {
+      color: var(--primary-ember) !important;
+    }
+
+    .orange-button, .submit-btn {
+      background: var(--gradient-ember) !important;
+      color: var(--bg-obsidian) !important;
+    }
+
+    .white-button:hover {
+      border-color: var(--primary-ember) !important;
+      color: var(--primary-ember) !important;
+    }
+
+    .section-subtitle {
+      background: var(--primary-glow) !important;
+      color: var(--primary-ember) !important;
+    }
+
+    /* Active Nav Link Overrides */
+    .w-dropdown-link.w--current,
+    .w-nav-link.w--current,
+    .single-menu-link.w--current div {
+      color: var(--primary-ember) !important;
+    }
+
+
+
     .book-demo-btn {
-      border: 1px solid #fff;
+      border: 1px solid var(--text-pure);
       padding: 10px 20px;
       border-radius: 20px;
-      color: #fff;
+      color: var(--text-pure);
       text-decoration: none;
     }
 
@@ -369,7 +403,7 @@
     }
 
     .custom-nav-link:hover {
-      color: #FB991C;
+      color: var(--primary-ember);
     }
 
     .nav-actions {
@@ -382,7 +416,7 @@
       border: 1px solid rgba(255, 255, 255, 0.3);
       padding: 10px 22px;
       border-radius: 50px;
-      color: #fff;
+      color: var(--text-pure);
       text-decoration: none;
       font-weight: 600;
       font-size: 14px;
@@ -423,7 +457,7 @@
       display: block;
       width: 25px;
       height: 2px;
-      background: #fff;
+      background: var(--text-pure);
       transition: all 0.3s ease;
     }
 
@@ -517,7 +551,7 @@
     .lang-toggle-btn {
       background: rgba(255, 255, 255, 0.1);
       border: 1px solid rgba(255, 255, 255, 0.3);
-      color: #fff;
+      color: var(--text-pure);
       padding: 8px 16px;
       border-radius: 50px;
       cursor: pointer;
@@ -529,9 +563,9 @@
     }
 
     .lang-toggle-btn:hover {
-      background: rgba(251, 153, 28, 0.2);
-      border-color: #FB991C;
-      color: #FB991C;
+      background: var(--primary-glow);
+      border-color: var(--primary-ember);
+      color: var(--primary-ember);
     }
 
     /* ZATCA feature card left content spacing */
@@ -758,7 +792,7 @@
               <h1 class="hero-title notranslate">One-Stop Solution For All Your Business Needs</h1>
               <p style="opacity:1" class="hero-text">One Smart Solution
                 That Runs Your Entire Business. Grow Your Business With Just One Application.</p>
-              <p style="opacity:1; margin-top: 10px; color: #FB991C; font-weight: bold;">Leave Spreadsheets Behind.
+              <p style="opacity:1; margin-top: 10px; color: var(--primary-ember); font-weight: bold;">Leave Spreadsheets Behind.
                 Level Up Your Business With ERP</p>
             </div>
           </div>
@@ -1477,7 +1511,7 @@
       <div class="contact-wrapper">
         <div class="contact-info-box">
           <div class="section-subtitle"
-            style="background: rgba(251, 153, 28, 0.1); color: var(--primary-ember); padding: 5px 15px; border-radius: 20px; display: inline-block; margin-bottom: 20px;">
+            style="background: var(--primary-glow); color: var(--primary-ember); padding: 5px 15px; border-radius: 20px; display: inline-block; margin-bottom: 20px;">
             Contact Us</div>
           <h2>Let's Discuss Your <span>Business Needs</span></h2>
           <p class="feature-section-text" style="max-width: 500px;">Have questions about TBO ERP or want to see a
@@ -1583,14 +1617,14 @@
                     <h4
                       style="margin: 0; margin-bottom: 5px; color: var(--primary-ember); font-size: 13px; text-transform: uppercase;">
                       Saudi Arabia</h4>
-                    <p style="margin: 0; font-size: 13px; color: #94A3B8; line-height: 1.5;">King Abdulaziz St, Al Anud
+                    <p style="margin: 0; font-size: 13px; color: var(--text-slate); line-height: 1.5;">King Abdulaziz St, Al Anud
                       Muhanna<br>Business Park, Dammam 32424<br>+966 54 668 8551</p>
                   </div>
                   <div class="office-info">
                     <h4
                       style="margin: 0; margin-bottom: 5px; color: var(--primary-ember); font-size: 13px; text-transform: uppercase;">
                       UAE</h4>
-                    <p style="margin: 0; font-size: 13px; color: #94A3B8; line-height: 1.5;">Ras Al Khor Industrial
+                    <p style="margin: 0; font-size: 13px; color: var(--text-slate); line-height: 1.5;">Ras Al Khor Industrial
                       Area, Dubai<br>+971 506 073358</p>
                   </div>
                 </div>
@@ -1602,14 +1636,14 @@
                     <h4
                       style="margin: 0; margin-bottom: 5px; color: var(--primary-ember); font-size: 13px; text-transform: uppercase;">
                       India</h4>
-                    <p style="margin: 0; font-size: 13px; color: #94A3B8; line-height: 1.5;">Phase 2, 5th floor, Hilite
+                    <p style="margin: 0; font-size: 13px; color: var(--text-slate); line-height: 1.5;">Phase 2, 5th floor, Hilite
                       Business Park,<br>Kozhikode<br>+91 9747 888 220</p>
                   </div>
                   <div class="office-info">
                     <h4
                       style="margin: 0; margin-bottom: 5px; color: var(--primary-ember); font-size: 13px; text-transform: uppercase;">
                       UK</h4>
-                    <p style="margin: 0; font-size: 13px; color: #94A3B8; line-height: 1.5;">124 City Road, London, ECIV
+                    <p style="margin: 0; font-size: 13px; color: var(--text-slate); line-height: 1.5;">124 City Road, London, ECIV
                       2NX</p>
                   </div>
                 </div>
